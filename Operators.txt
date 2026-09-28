@@ -1,0 +1,64 @@
+Bitwise operators are used to perform operations on individual bits of integer values.
+
+1. Bitwise AND (&)
+   - Syntax: a & b
+   - Result: Sets each bit to 1 only if both corresponding bits are 1.
+   - Example:
+     a = 5   // 0101
+     b = 3   // 0011
+     a & b = 1 // 0001
+
+2. Bitwise OR (|)
+   - Syntax: a | b
+   - Result: Sets each bit to 1 if at least one of the corresponding bits is 1.
+   - Example:
+     a = 5   // 0101
+     b = 3   // 0011
+     a | b = 7 // 0111
+
+3. Bitwise XOR (^)
+   - Syntax: a ^ b
+   - Result: Sets each bit to 1 only if one of the corresponding bits is 1, but not both.
+   - Example:
+     a = 5   // 0101
+     b = 3   // 0011
+     a ^ b = 6 // 0110
+
+4. Bitwise NOT (~)
+   - Syntax: ~a
+   - Result: Inverts all bits (flips 0 to 1 and 1 to 0).
+   - Example:
+     a = 5   // 0000000000000101
+     ~a = -6 // 1111111111111010 (in 2's complement representation)
+
+5. Bitwise Left Shift (<<)
+   - Syntax: a << n
+   - Result: Shifts bits to the left by n positions, filling with 0s on the right.
+   - Example:
+     a = 5   // 0101
+     a << 1 = 10 // 1010
+
+6. Bitwise Right Shift (>>)
+   - Syntax: a >> n
+   - Result: Shifts bits to the right by n positions. For signed integers, sign bit is extended.
+   - Example:
+     a = 5   // 0101
+     a >> 1 = 2 // 0010
+
+7. Bitwise Zero Fill Right Shift (>>>)
+   - Syntax: a >>> n
+   - Result: Shifts bits to the right by n positions, filling with 0s on the left.
+   - Example:
+     a = -5
+     a >>> 1 = 2147483645
+
+Summary:
+- &  -> AND
+- |  -> OR
+- ^  -> XOR
+- ~  -> NOT
+- << -> Left shift
+- >> -> Right shift
+- >>> -> Zero-fill right shift
+
+These operators are mainly used for low-level programming, bit masking, optimization, and data manipulation.
