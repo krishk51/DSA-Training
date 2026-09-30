@@ -1,21 +1,30 @@
 #include <stdio.h>
 
 int main() {
-    int t,digit;
+    int t;
     scanf("%d", &t);
 
     while (t--) {
-        int n,s;
+        int n;
         scanf("%d", &n);
 
+        char s[n + 1];
+        scanf("%s", s);
 
-    //      do {
-    //     digit=n%10;
-    //     n=n/10;
-    //     } while (n>0);
-        
-    // }
+        for (int i = 0; i + 1 < n; i += 2) {
+            if (s[i] == '0' && s[i + 1] == '0') {
+                printf("A");
+            } else if (s[i] == '0' && s[i + 1] == '1') {
+                printf("T");
+            } else if (s[i] == '1' && s[i + 1] == '0') {
+                printf("C");
+            } else if (s[i] == '1' && s[i + 1] == '1') {
+                printf("G");
+            }
+        }
 
+        printf("\n");
+    }
 
     return 0;
 }
